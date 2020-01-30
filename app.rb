@@ -12,9 +12,16 @@ class App < Sinatra::Base
     "#{@number_squared}"
   end
   
-  # get '/say/:number/:phrase' do
+  get '/say/:number/:phrase' do 
+    str = []
     
-  # end
+    @number = params[:number].to_i
+    @phrase = params[:phrase]
+      @number.times do 
+      str << "#{@phrase}"
+    end
+    str
+  end
   
   get '/say/:word1/:word2/:word3/:word4/:word5' do
     @word1 = params[:word1]
