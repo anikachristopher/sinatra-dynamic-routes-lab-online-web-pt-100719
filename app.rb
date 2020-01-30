@@ -12,8 +12,9 @@ class App < Sinatra::Base
     "#{@number_squared}"
   end
   
-  get '/say/:number/:phrase' do
-  end
+  # get '/say/:number/:phrase' do
+    
+  # end
   
   get '/say/:word1/:word2/:word3/:word4/:word5' do
     @word1 = params[:word1]
@@ -24,6 +25,6 @@ class App < Sinatra::Base
     "#{@word1} #{@word2} #{@word3} #{@word4} #{@word5}."
   end
   
-  # get '/:operation/:number1/:number2' do
-  # end
+  get '/:operation/:number1/:number2' do
+  end
 end
