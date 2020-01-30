@@ -11,4 +11,7 @@ class App < Sinatra::Base
     @number_squared = params[:number].to_i * params[:number].to_i
     "#{@number_squared}"
   end
+  
+  get '/say/:number/:phrase' do
+    
 end
